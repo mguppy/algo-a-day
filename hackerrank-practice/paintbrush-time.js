@@ -1,7 +1,7 @@
 // An array color [] was given where color [i] represented the color with which a pencil had to be colored. There was one paintbrush corresponding to every color and we had to wait b seconds before using the same brush again (time to refill is b secs). At every second you can either paint a pencil or wait for the paintbrush to get refilled. For a given b and color [] find the minimum time it takes to color all the pencils.
-function onlyUnique(value, index, self) {
-    return self.indexOf(value) === index;
-}
+// function onlyUnique(value, index, self) {
+//     return self.indexOf(value) === index;
+// }
 
 
 function findMinTime(color) {
@@ -14,6 +14,7 @@ var b = 5;
 // Getting unique colors from color array
 var unique = color.filter(onlyUnique);
 console.log(unique);
+console.log("Vlocity" && "Developer")
 
 // Loop through all of the colors and set each color to a time of 0 to start
 for (let i = 0; i < unique.length; i++) {
@@ -67,3 +68,13 @@ function setTimeRemaining (colortimeArray, color, timetoset) {
         }
     }
 }
+
+// var name = "Vlocity";
+// function foo () {
+//     name = "Developer";
+//     return;
+//     function name() {}
+// }
+// foo();
+// console.log(name);
+// }
