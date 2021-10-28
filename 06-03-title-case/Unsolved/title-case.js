@@ -1,26 +1,18 @@
 // Write code to create a function takes a string and returns a new string with the first letters of each word capitalized
 
 var titleCase = function(str) {
-    // Make empty result array
-    var result = [];
+    str[0] = (str.charAt(0)).toUpperCase();
+    console.log(str[0])
 
-    // Split string by spaces into words
-    words = str.split(" ");
+    for( var i = 1; i < str.length; i++ ) {
+        var previousLetter = str[i-1];
+        var currentLetter = str[i];
 
-    //Loop through each of the words in the array and grab the first letter of each word
-    for (var i = 0; i < words.length; i++) {
-        // Split words into letters
-        var word = words[i].split("");
-
-        // Grab the first letter of each word and upper case it
-        word[0] = word[0].toUpperCase();
-        console.log(word);
-
-        // Once words have been uppercased, push the words into the result array and join the letters together
-        result.push(word.join(""));
-        console.log(result);
+        if (previousLetter == ' ') {
+            str[i] = str[i].toUpperCase();
+            // console.log(str[i])
+        }
     }
 
-    // Return all words joined by spaces
-    return result.join(" ");
+    return str;
 };
